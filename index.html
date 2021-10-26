@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <title>LabsLand</title>
 </head>
 <body>
-    <table>
+    <table id="tabla">
         <tr>
             <th>Título</th>
             <th>Descripción</th>
@@ -70,5 +71,29 @@
             <td>Pedro Plaza</td>
         </tr>
     </table>
+
+    <div class="form">
+        <div class="item">
+            Titulo: <input type="text" id ="titulo">
+        </div>
+        <div class="item">
+            <label for="descripcion">Descripción: </label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Escribe aqui tu descripción..."></textarea>
+        </div>
+        <div class="item">
+            Disponibilidad: <input type="text" id="disponibilidad">
+        </div>
+        <div class="item">
+            Nivel: <input type="text" id ="nivel">
+        </div>
+        <div class="item">
+            Autor: <input type="text" id="autor">
+        </div>
+        <div class="item">
+            <button onclick="addEntryToTable(document.getElementById('titulo'),document.getElementById('descripcion'),document.getElementById('disponibilidad'),document.getElementById('nivel'),document.getElementById('autor'))">Submit</button>
+        </div>
+        
+    </div>
+    
 </body>
 </html>
